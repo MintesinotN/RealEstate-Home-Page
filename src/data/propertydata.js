@@ -8,39 +8,38 @@ import { TbTargetArrow } from "react-icons/tb";
 import { TbPool } from "react-icons/tb";
 
 const property = [
-    {
-        nameofproperty:'Multimedia Center',
-        Icon:<CgMusicSpeaker />
-    },
-    {
-        nameofproperty:'Private Territory',
-        Icon:<PiWall />
-    },
-    {
-        nameofproperty:'Guest Suites',
-        Icon:<HiBuildingOffice2 />
-    },
-    {
-        nameofproperty:'Car Parking',
-        Icon:<GiHomeGarage />
-    },
-    {
-        nameofproperty:'Yoga Studio',
-        Icon:<GiMeditation />
-    },
-    {
-        nameofproperty:'Pet House',
-        Icon:<GiDogHouse />
-    },
-    {
-        nameofproperty:'Fast Internet',
-        Icon:<TbTargetArrow />
-    },
-    {
-        nameofproperty:'Swimming Pool',
-        Icon:<TbPool />
-    }
-    
-]
+  {
+    nameofproperty: "Multimedia Center",
+    Icon: <CgMusicSpeaker />,
+  },
+  {
+    nameofproperty: "Private Territory",
+    Icon: <PiWall />,
+  },
+  {
+    nameofproperty: "Guest Suites",
+    Icon: <HiBuildingOffice2 />,
+  },
+  {
+    nameofproperty: "Car Parking",
+    Icon: <GiHomeGarage />,
+  },
+  {
+    nameofproperty: "Yoga Studio",
+    Icon: <GiMeditation />,
+  },
+  {
+    nameofproperty: "Pet House",
+    Icon: <GiDogHouse />,
+  },
+  {
+    nameofproperty: "Fast Internet",
+    Icon: <TbTargetArrow />,
+  },
+  {
+    nameofproperty: "Swimming Pool",
+    Icon: <TbPool />,
+  },
+];
 
 export default property;
