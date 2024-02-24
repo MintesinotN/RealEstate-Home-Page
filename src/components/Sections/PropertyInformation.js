@@ -19,7 +19,7 @@ export default function PropertyInformation() {
           <p className="pt-4">Net Worth : $20,555,000</p>
           <p className="pt-4">Category : Modern House</p>
           <p className="pt-4 pb-8">Launch Time : 10 December, 2019</p>
-          <div className="bg-orange-200 px-8 py-2 mr-[23rem]">Get Details</div>
+          <div className="bg-orange-200 px-8 py-2 mr-60 text-nowrap">Get Details</div>
         </div>
       </div>
     </div>

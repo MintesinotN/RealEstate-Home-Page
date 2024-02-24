@@ -2,6 +2,7 @@ import Menucontent from "./menubar";
 import contentofmenu from "../../data/data";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+// import Contentdetail from "./contentdetails";
 
 export default function HomePage() {
   return (
@@ -11,27 +12,25 @@ export default function HomePage() {
         alt="container"
         className="w-full absolute z-0"
       />
-      <div className="flex absolute p-8">
+      <div className="flex absolute p-8 z-10">
         <p className="text-3xl text-white px-16">
           A<span className="text-orange-400">b</span>olire
         </p>
         {contentofmenu.map((value) => {
           return (
-            <div>
               <div className="py-2 text-white w-32 ">
                 <Menucontent value={value} />
               </div>
-            </div>
           );
         })}
         <p className="py-2 text-white">Contact</p>
-        <div className="py-2 text-white flex ml-48">
+        <div className="py-2 text-white flex ml-24">
           <FaRegCalendarCheck className="h-6 w-6" />
           <IoSearch className="h-6 w-6 ml-8" />
           <p className="ml-8 text-xl">(+844) 1900 444 336</p>
         </div>
       </div>
-      <div className="absolute pl-[500px] pt-56 text-white text-5xl">
+      <div className="absolute pl-[500px] pt-56 text-white text-5xl z-0">
         <h2>Modern House Make</h2>
         <h2 className="pl-28 pt-2">Better Life</h2>
         <p className="text-sm pt-4 pl-16">
