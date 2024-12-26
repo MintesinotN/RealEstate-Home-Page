@@ -19,7 +19,7 @@ export default function HomePage() {
         className="w-full h-[450px] sm:h-screen"
       />
       <div className="absolute top-0 w-full text-white">
-      <div className="flex sm:items-center max-sm:justify-between max-sm:px-4 justify-evenly pt-8">
+      <div className="flex sm:items-center max-sm:justify-between max-sm:px-4 justify-evenly pt-2 sm:pt-8">
         <p className="text-3xl whitespace-nowrap">
           A<span className="text-orange-400">b</span>olire
         </p>
