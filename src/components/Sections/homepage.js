@@ -4,6 +4,7 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function HomePage() {
 
@@ -26,8 +27,7 @@ export default function HomePage() {
         {
         (menu && isSmallScreen) ? 
         <div className="hidden max-sm:cursor-pointer max-sm:flex items-center" onMouseEnter={()=>setMenu(false)}>
-        Menu&nbsp;
-        <IoIosArrowDown className="mt-1" />
+          <GiHamburgerMenu size={35} />
         </div> :
         <div className="max-sm:bg-slate-700 max-sm:z-10 max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex max-sm:flex-col max-sm:items-center contents" onMouseLeave={()=>setMenu(true)}>
         {contentofmenu.map((value) => {
