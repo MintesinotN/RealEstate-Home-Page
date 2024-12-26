@@ -29,7 +29,7 @@ export default function HomePage() {
         Menu&nbsp;
         <IoIosArrowDown className="mt-1" />
         </div> :
-        <div className="max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex max-sm:flex-col max-sm:items-center contents" onMouseLeave={()=>setMenu(true)}>
+        <div className="max-sm:bg-slate-700 max-sm:z-10 max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex max-sm:flex-col max-sm:items-center contents" onMouseLeave={()=>setMenu(true)}>
         {contentofmenu.map((value) => {
           return (
             <Menucontent value={value} />

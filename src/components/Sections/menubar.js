@@ -8,7 +8,7 @@ const[isHovered, setIsHovered] = useState(false);
   return (
     <>
       <div className="sm:relative max-sm:w-full" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <div className="flex items-center max-sm:px-8 max-sm:block max-sm:text-center">
+        <div className="flex items-center max-sm:px-8 max-sm:block max-sm:text-center cursor-pointer">
         {value.contentname}&nbsp;
         <IoIosArrowDown className="mt-1 max-sm:hidden" />
         </div>
