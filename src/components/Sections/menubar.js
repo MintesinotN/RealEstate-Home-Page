@@ -7,14 +7,13 @@ const[isHovered, setIsHovered] = useState(false);
 
   return (
     <>
-      <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <div className="flex">
-          {value.contentname}&nbsp;
-        <IoIosArrowDown className="mt-2" />
+      <div className="sm:relative max-sm:w-full" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="flex items-center max-sm:px-8 max-sm:block max-sm:text-center">
+        {value.contentname}&nbsp;
+        <IoIosArrowDown className="mt-1 max-sm:hidden" />
         </div>
-        
         {isHovered && (
-            <div>
+            <div className="max-sm:min-h-full absolute top-0 right-36">
               <Contentdetail value={value} key='{value.contentname}' />
             </div>
           )}

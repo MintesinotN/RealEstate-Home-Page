@@ -1,6 +1,6 @@
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-  }
+  } */
 body{
   background-image: url(../public/images/backgroundmain.jpg);
   background-attachment: fixed;

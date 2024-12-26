@@ -2,43 +2,55 @@ import Menucontent from "./menubar";
 import contentofmenu from "../../data/data";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
-// import Contentdetail from "./contentdetails";
+import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function HomePage() {
+
+  const [menu,setMenu] = useState(true);
+
+  const isSmallScreen =window.matchMedia('(max-width: 639px)').matches;
+
   return (
     <div className="relative">
       <img
         src="images/backgroundmain.jpg"
         alt="container"
-        className="w-full absolute z-0"
+        className="w-full h-screen"
       />
-      <div className="flex absolute p-8 z-10">
-        <p className="text-3xl text-white px-16">
+      <div className="absolute top-0 w-full text-white">
+      <div className="flex sm:items-center max-sm:justify-between max-sm:px-4 justify-evenly pt-8">
+        <p className="text-3xl whitespace-nowrap">
           A<span className="text-orange-400">b</span>olire
         </p>
+        {
+        (menu && isSmallScreen) ? 
+        <div className="hidden max-sm:cursor-pointer max-sm:flex items-center" onMouseEnter={()=>setMenu(false)}>
+        Menu&nbsp;
+        <IoIosArrowDown className="mt-1" />
+        </div> :
+        <div className="max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex max-sm:flex-col max-sm:items-center contents" onMouseLeave={()=>setMenu(true)}>
         {contentofmenu.map((value) => {
           return (
-              <div className="py-2 text-white w-32 ">
-                <Menucontent value={value} />
-              </div>
+            <Menucontent value={value} />
           );
         })}
-        <p className="py-2 text-white">Contact</p>
-        <div className="py-2 text-white flex ml-24">
-          <FaRegCalendarCheck className="h-6 w-6" />
-          <IoSearch className="h-6 w-6 ml-8" />
-          <p className="ml-8 text-xl">(+844) 1900 444 336</p>
         </div>
+        }
+        <p className="py-2 max-sm:hidden">Contact</p>
+        <FaRegCalendarCheck className="h-6 w-6 max-sm:hidden" />
+        <IoSearch className="h-6 w-6 max-sm:hidden" />
+        <p className="text-xl whitespace-nowrap max-lg:hidden">(+844) 1900 444 336</p>
       </div>
-      <div className="absolute pl-[500px] pt-56 text-white text-5xl z-0">
-        <h2>Modern House Make</h2>
-        <h2 className="pl-28 pt-2">Better Life</h2>
-        <p className="text-sm pt-4 pl-16">
+      <div className="flex flex-col items-center gap-2 absolute top-64 left-1/2 transform -translate-x-1/2 text-5xl max-sm:text-3xl">
+        <h2 className="w-[450px] text-center max-sm:w-[280px]">Modern House Make Better Life</h2>
+        <p className="text-sm text-center">
           1105 Madison Plaza Suite 120 Chesapeake, VA 23320
         </p>
-        <p className="bg-orange-400 absolute text-base py-2 px-8 ml-36 mt-6">
+        <p className="bg-orange-400 text-base w-fit py-2 px-8">
           Take a Tour
         </p>
+      </div>
       </div>
     </div>
   );
