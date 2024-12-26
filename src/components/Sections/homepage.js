@@ -16,7 +16,7 @@ export default function HomePage() {
       <img
         src="images/backgroundmain.jpg"
         alt="container"
-        className="w-full h-screen"
+        className="w-full h-[450px] sm:h-screen"
       />
       <div className="absolute top-0 w-full text-white">
       <div className="flex sm:items-center max-sm:justify-between max-sm:px-4 justify-evenly pt-8">
@@ -42,8 +42,8 @@ export default function HomePage() {
         <IoSearch className="h-6 w-6 max-sm:hidden" />
         <p className="text-xl whitespace-nowrap max-lg:hidden">(+844) 1900 444 336</p>
       </div>
-      <div className="flex flex-col items-center gap-2 absolute top-64 left-1/2 transform -translate-x-1/2 text-5xl max-sm:text-3xl">
-        <h2 className="w-[450px] text-center max-sm:w-[280px]">Modern House Make Better Life</h2>
+      <div className="flex flex-col items-center gap-2 absolute max-sm:top-40 top-64 left-1/2 transform -translate-x-1/2 text-5xl max-sm:text-3xl">
+        <h2 className="sm:w-[450px] text-center max-sm:min-w-[240px]">Modern House Make Better Life</h2>
         <p className="text-sm text-center">
           1105 Madison Plaza Suite 120 Chesapeake, VA 23320
         </p>

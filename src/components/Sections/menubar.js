@@ -13,8 +13,8 @@ const[isHovered, setIsHovered] = useState(false);
         <IoIosArrowDown className="mt-1 max-sm:hidden" />
         </div>
         {isHovered && (
-            <div className="max-sm:min-h-full absolute top-0 right-36">
-              <Contentdetail value={value} key='{value.contentname}' />
+            <div className="max-sm:min-h-full absolute z-10 max-sm:top-0 max-sm:right-36">
+              <Contentdetail value={value} />
             </div>
           )}
       </div>
