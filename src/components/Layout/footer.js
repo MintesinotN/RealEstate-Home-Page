@@ -42,10 +42,10 @@ export default function Footer() {
             updates
           </p>
           <div className="flex justify-between pt-2 sm:pt-10 pb-3">
-            <p className="text-neutral-500">Your email address</p>
+            <input className="placeholder:text-neutral-500 bg-inherit outline-none w-full pr-2" placeholder="Your email address" />
             <TfiEmail />
           </div>
-          <hr />
+          <hr className="max-sm:hidden" />
         </div>
       </div>
       <hr className="text-black" />
