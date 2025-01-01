@@ -37,8 +37,8 @@ export default function HomePage() {
           A<span className="text-orange-400">b</span>olire
         </p>
         {
-        <div className="sm:contents">
-        <div ref={menuRef} className="hidden max-sm:flex justify-end items-center" onClick={()=>setMenu(menu=>!menu)}>
+        <div ref={menuRef} className="sm:contents">
+        <div className="hidden max-sm:flex justify-end items-center" onClick={()=>setMenu(menu=>!menu)}>
           <GiHamburgerMenu size={35} className="max-sm:cursor-pointer" />
         </div>
         <div className={`${menu ? "max-sm:flex max-sm:bg-slate-700 max-sm:z-10 max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex-col max-sm:items-center" : "max-sm:hidden"} contents`}>
