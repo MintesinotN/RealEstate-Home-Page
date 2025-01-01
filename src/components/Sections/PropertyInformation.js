@@ -1,7 +1,7 @@
 export default function PropertyInformation() {
   return (
     <div className="bg-white">
-      <div className="flex mt-32 max-sm:mt-12 py-16 justify-center max-md:items-center max-md:flex-col md:max-xl:gap-16 xl:gap-24 px-8">
+      <div className="flex py-16 justify-center max-md:items-center max-md:flex-col md:max-xl:gap-16 xl:gap-24 px-8">
         <img
           src="images/image2.png"
           className="max-md:w-full md:max-h-full sm:pt-16 md:max-lg:max-w-[350px]"

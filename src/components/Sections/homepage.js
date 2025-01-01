@@ -2,15 +2,27 @@ import Menucontent from "./menubar";
 import contentofmenu from "../../data/data";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
-import { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function HomePage() {
 
-  const [menu,setMenu] = useState(true);
+  const [menu,setMenu] = useState(false);
 
-  const isSmallScreen =window.matchMedia('(max-width: 639px)').matches;
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="relative">
@@ -25,16 +37,17 @@ export default function HomePage() {
           A<span className="text-orange-400">b</span>olire
         </p>
         {
-        (menu && isSmallScreen) ? 
-        <div className="hidden max-sm:cursor-pointer max-sm:flex items-center" onMouseEnter={()=>setMenu(false)}>
-          <GiHamburgerMenu size={35} />
-        </div> :
-        <div className="max-sm:bg-slate-700 max-sm:z-10 max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex max-sm:flex-col max-sm:items-center contents" onMouseLeave={()=>setMenu(true)}>
+        <div className="sm:contents">
+        <div ref={menuRef} className="hidden max-sm:flex justify-end items-center" onClick={()=>setMenu(menu=>!menu)}>
+          <GiHamburgerMenu size={35} className="max-sm:cursor-pointer" />
+        </div>
+        <div className={`${menu ? "max-sm:flex max-sm:bg-slate-700 max-sm:z-10 max-sm:relative max-sm:border-2 max-sm:border-gray-500 max-sm:gap-4 max-sm:rounded-md max-sm:py-2 max-sm:flex-col max-sm:items-center" : "max-sm:hidden"} contents`}>
         {contentofmenu.map((value) => {
           return (
             <Menucontent value={value} />
           );
         })}
+        </div>
         </div>
         }
         <p className="py-2 max-sm:hidden">Contact</p>
